@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06122f">
+  <title>维韧（WITHIN）打法｜交互课件</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="deck" id="deck">
+    <header class="topbar">
+      <button class="icon-button" id="menuButton" aria-label="打开目录" title="目录（M）">
+        <span></span><span></span><span></span>
+      </button>
+      <img class="brand-logo" src="assets/peninsula-logo-cropped.png" alt="Peninsula 半岛医疗">
+      <div class="top-actions">
+        <div class="timer" id="timer" aria-live="polite">00:00</div>
+        <button class="text-button" id="timerButton" title="计时器（T）">计时</button>
+        <button class="text-button" id="notesButton" title="讲者备注（N）">备注</button>
+        <button class="text-button" id="fullscreenButton" title="全屏（F）">全屏</button>
+      </div>
+    </header>
+
+    <main class="stage" id="stage">
+      <section class="slide active cover-slide" data-title="封面" data-notes="开场：今天不讲一套需要死记硬背的参数，而是讲一个临床决策框架。15分钟后，希望大家看到 WITHIN，就能说出六步分别解决什么问题。">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="cover-copy">
+          <p class="eyebrow">半岛大超炮标准化实操 SOP · 核心逻辑</p>
+          <h1>维韧 <span>WITHIN</span> 打法</h1>
+          <p class="cover-subtitle">从“看见结构”到“自然年轻”</p>
+          <div class="cover-tags">
+            <span>影像先行</span>
+            <span>分层治疗</span>
+            <span>整合决策</span>
+          </div>
+          <button class="primary-button start-button" data-next>开始探索 <b>→</b></button>
+        </div>
+        <div class="rabbit-hero">
+          <div class="speech-bubble">别急着“打”——<br>先把路线看清楚。</div>
+          <img src="assets/rabbit.png" alt="兔坚持">
+          <div class="rabbit-name">兔坚持 · 今日领航员</div>
+        </div>
+        <div class="cover-meta">医学部双周分享会 · 建议时长 15 min</div>
+      </section>
+
+      <section class="slide" data-title="先问一个问题" data-notes="请大家现场作答。答案是“不一样”。引出三个差异：不同部位、不同个体、同一人左右侧。维韧打法的起点，就是承认结构差异，而不是先套参数。">
+        <div class="section-kicker">01 · WHY</div>
+        <div class="slide-heading">
+          <h2>同一张脸，<em>各区域、左右侧</em>的组织厚度都一样吗？</h2>
+          <p>先凭直觉选一个答案。</p>
+        </div>
+        <div class="question-layout">
+          <div class="choice-panel" id="openingQuestion">
+            <button class="choice-card" data-opening-answer="same">
+              <span class="choice-letter">A</span>
+              <strong>基本一样</strong>
+              <small>标准参数大体都能套用</small>
+            </button>
+            <button class="choice-card" data-opening-answer="different">
+              <span class="choice-letter">B</span>
+              <strong>存在差异</strong>
+              <small>要先看结构，再做方案</small>
+            </button>
+            <div class="feedback-card" id="openingFeedback" aria-live="polite">
+              <b>答案藏在影像里。</b>
+              <span>请选择后揭晓</span>
+            </div>
+          </div>
+          <div class="visual-card point-map-card">
+            <img src="assets/sop/image2.png" alt="B超面部测量点位示意图">
+            <div class="image-caption"><b>21 个探测点位</b><span>10 组对称位点 + 1 个正中位点</span></div>
+          </div>
+        </div>
+        <div class="rabbit-corner">
+          <img src="assets/rabbit.png" alt="">
+          <p>路线不一样，<br>导航当然不能复制粘贴。</p>
+        </div>
+      </section>
+
+      <section class="slide" data-title="什么是维韧" data-notes="维韧源自 Beauty From Within。WITH 是与医生同行、做长期伙伴；IN 是关注深层结构、追求由内而外的自然年轻。中文还可理解为维系结构、韧塑年轻。">
+        <div class="section-kicker">02 · WHAT</div>
+        <div class="slide-heading compact">
+          <h2>“维韧”，不只是一组英文字母</h2>
+          <p>它同时连接品牌主张、临床路径与结果目标。</p>
+        </div>
+        <div class="within-word" aria-label="WITHIN">
+          <span>W</span><span>I</span><span>T</span><span>H</span><span>I</span><span>N</span>
+        </div>
+        <div class="concept-switch" role="tablist" aria-label="WITH 与 IN 的含义">
+          <button class="concept-tab active" data-concept="with" role="tab" aria-selected="true">WITH｜同行</button>
+          <button class="concept-tab" data-concept="in" role="tab" aria-selected="false">IN｜向内</button>
+        </div>
+        <div class="concept-content" id="conceptContent">
+          <div class="concept-icon">↔</div>
+          <div>
+            <h3>与医生同行，做长期伙伴</h3>
+            <p>用产品、标准、培训、学术与临床支持，把一次设备交付变成长期陪伴。</p>
+          </div>
+        </div>
+        <div class="definition-strip">
+          <div><b>维系结构</b><span>关注皮肤、脂肪、肌膜、韧带等深层支撑</span></div>
+          <div><b>韧塑年轻</b><span>安全边界内，获得协调、自然、像自己的改善</span></div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="六步地图" data-notes="把六步分成两段记忆：前四步 W-I-T-H 是从影像到治疗执行；后两步 I-N 是从整合决策到结果目标。点击任一字母，可快速查看它解决的问题。">
+        <div class="section-kicker">03 · MAP</div>
+        <div class="slide-heading compact">
+          <h2>一张图记住 <em>WITHIN 六步</em></h2>
+          <p>点击字母，看看每一步在解决什么问题。</p>
+        </div>
+        <div class="step-map" id="stepMap">
+          <button class="step-node active" data-step="W"><b>W</b><span>Watch</span><small>影像先行</small></button>
+          <i></i>
+          <button class="step-node" data-step="I1"><b>I</b><span>Identify</span><small>识别靶层</small></button>
+          <i></i>
+          <button class="step-node" data-step="T"><b>T</b><span>Target</span><small>精准锁定</small></button>
+          <i></i>
+          <button class="step-node" data-step="H"><b>H</b><span>Hierarchy</span><small>分层治疗</small></button>
+          <i class="decision-link"></i>
+          <button class="step-node decision-node" data-step="I2"><b>I</b><span>Integrate</span><small>整合决策</small></button>
+          <i></i>
+          <button class="step-node result-node" data-step="N"><b>N</b><span>Natural</span><small>自然年轻</small></button>
+        </div>
+        <div class="step-detail" id="stepDetail">
+          <div class="step-big-letter">W</div>
+          <div>
+            <p class="step-question">先回答：<b>“实际结构是什么？”</b></p>
+            <h3>Watch｜影像先行</h3>
+            <p>用 B 超观察治疗区域各层组织厚度与特点，并辅助识别、规避风险区域。</p>
+          </div>
+          <div class="analogy"><span>导航类比</span><b>先看清路况</b></div>
+        </div>
+        <div class="two-phase">
+          <span><b>WITH</b>：看清 → 识别 → 锁定 → 分层执行</span>
+          <span><b>IN</b>：整合判断 → 自然结果</span>
+        </div>
+      </section>
+
+      <section class="slide" data-title="W + I：先看再识" data-notes="不要把 Watch 和 Identify 混为一谈。Watch 是获取真实影像，Identify 是把影像转化为层次和深度信息。系统可识别21点位的真皮、脂肪、SMAS等结构，为深度与按压力度提供参考。">
+        <div class="section-kicker">04 · W + I</div>
+        <div class="slide-heading compact">
+          <h2>先“看见”，再“看懂”</h2>
+          <p>影像不是装饰，而是后续选择深度、区域与力度的依据。</p>
+        </div>
+        <div class="wi-grid">
+          <div class="process-card watch-card">
+            <div class="process-tag">W · Watch</div>
+            <h3>影像先行</h3>
+            <img src="assets/sop/image14.png" alt="掌超探头操作示意">
+            <ul>
+              <li>观察各层厚度与结构特点</li>
+              <li>注意个体差异与左右差异</li>
+              <li>辅助识别、规避风险区域</li>
+            </ul>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="process-card identify-card">
+            <div class="process-tag">I · Identify</div>
+            <h3>识别靶层</h3>
+            <img src="assets/sop/image1.png" alt="智能超声影像系统界面">
+            <ul>
+              <li>识别真皮、脂肪、SMAS 等层次</li>
+              <li>形成治疗深度选择参考</li>
+              <li>为按压力度调整提供依据</li>
+            </ul>
+          </div>
+        </div>
+        <div class="memory-line"><span>W</span> 获取事实 <b>→</b> <span>I</span> 翻译事实</div>
+      </section>
+
+      <section class="slide" data-title="T：精准锁定" data-notes="Target 不是只有画线，而是把影像评估转换为治疗地图：三处神经浅出孔、刀头平铺区域、刀头加强线、炮头加强区。点击三个标签展示。强调先定目的地与路线，避免治疗跑偏。">
+        <div class="section-kicker">05 · T</div>
+        <div class="slide-heading compact">
+          <h2>Target｜把影像结果变成“治疗地图”</h2>
+          <p>从“知道结构”走向“知道在哪里做、哪里加强、哪里避开”。</p>
+        </div>
+        <div class="target-layout">
+          <div class="target-tabs" role="tablist">
+            <button class="target-tab active" data-target-view="base">三孔四线</button>
+            <button class="target-tab" data-target-view="lines">刀头加强线</button>
+            <button class="target-tab" data-target-view="zones">炮头加强区</button>
+          </div>
+          <div class="target-visual">
+            <img id="targetImage" src="assets/sop/image16.png" alt="面部标记示意">
+          </div>
+          <div class="target-copy" id="targetCopy">
+            <span class="mini-label">安全边界 + 基础分区</span>
+            <h3>先标出“三孔”，再完成“四线”</h3>
+            <p>标记眶上孔、眶下孔、颏孔；完成刀头评估 A 区与平铺 B 区画线，为治疗头组合与深度选择建立坐标。</p>
+            <div class="target-keyword">目的：治疗不“跑偏”</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="H：分层治疗" data-notes="用一个参数题帮助理解分层治疗。依据SOP示例：颧弓韧带区测量深度≥4.5mm，建议 MFUS4.5 + MFUS3.0；3.0–4.5mm建议 MFUS3.0。强调这只是示例，实际仍要整合患者耐受、区域、能量和发数。">
+        <div class="section-kicker">06 · H</div>
+        <div class="slide-heading compact">
+          <h2>Hierarchy｜不是“一套方法打全脸”</h2>
+          <p>由深至浅、深浅兼治；不同层次、区域与耐受，选择不同组合。</p>
+        </div>
+        <div class="scenario-card">
+          <div class="scenario-info">
+            <span class="scenario-badge">现场小推演</span>
+            <h3>颧弓韧带区 B 超测量深度：<em>4.8 mm</em></h3>
+            <p>若开展刀头评估 A 区加强治疗，以下哪组更符合 SOP 示例？</p>
+            <div class="depth-stack">
+              <div class="layer skin"><span>表层</span><b>皮肤</b></div>
+              <div class="layer fat"><span>浅层</span><b>脂肪</b></div>
+              <div class="layer smas"><span>深层</span><b>SMAS / 韧带</b><i>4.8 mm</i></div>
+            </div>
+          </div>
+          <div class="scenario-options" id="depthQuestion">
+            <button data-depth-answer="a"><b>A</b><span>仅 MFUS3.0</span></button>
+            <button data-depth-answer="b"><b>B</b><span>MFUS4.5 + MFUS3.0</span></button>
+            <button data-depth-answer="c"><b>C</b><span>所有治疗头都叠加</span></button>
+            <div class="scenario-feedback" id="depthFeedback">选择一个方案，兔坚持会告诉你理由。</div>
+          </div>
+        </div>
+        <p class="medical-note">示例仅用于理解决策逻辑；实际操作须由具备资质的专业医师依说明书、患者情况与完整评估执行。</p>
+      </section>
+
+      <section class="slide" data-title="I：整合决策" data-notes="Integrate 是核心原则，不是流程尾声才发生。让听众逐一点击决策信息。只有把客观情况、影像、既往史、诉求和医生美学判断放在一起，才形成个体化方案。">
+        <div class="section-kicker">07 · I</div>
+        <div class="slide-heading compact">
+          <h2>Integrate｜方案不是由“一个数据”决定</h2>
+          <p>点击信息卡，把一份个体化方案拼完整。</p>
+        </div>
+        <div class="integrate-layout">
+          <div class="evidence-cloud" id="evidenceCloud">
+            <button class="evidence-chip" data-evidence="客观面部情况"><span>01</span>客观面部情况</button>
+            <button class="evidence-chip" data-evidence="B超评估结果"><span>02</span>B超评估结果</button>
+            <button class="evidence-chip" data-evidence="既往治疗史"><span>03</span>既往治疗史</button>
+            <button class="evidence-chip" data-evidence="求美者诉求"><span>04</span>求美者诉求</button>
+            <button class="evidence-chip" data-evidence="医生审美判断"><span>05</span>医生审美判断</button>
+            <button class="generate-button" id="generatePlan" disabled>整合生成方案</button>
+          </div>
+          <div class="plan-console" id="planConsole">
+            <div class="console-top"><span></span><span></span><span></span><b>WITHIN · PLAN</b></div>
+            <div class="console-body">
+              <div class="plan-placeholder" id="planPlaceholder">
+                <div class="radar"></div>
+                <p>已选择 <b id="evidenceCount">0</b> / 5 项信息</p>
+                <small>集齐后生成治疗决策框架</small>
+              </div>
+              <div class="plan-result" id="planResult">
+                <h3>个体化治疗方案</h3>
+                <ul>
+                  <li><span>区域</span>治疗区 + 规避区</li>
+                  <li><span>层次</span>治疗头 + 治疗深度</li>
+                  <li><span>强度</span>能量等级 + 按压力度</li>
+                  <li><span>剂量</span>治疗发数 + 区域分配</li>
+                </ul>
+                <p>不是哪里松就只打哪里，<br>而是整体看脸、综合判断、个性化设计。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-title="N：自然年轻" data-notes="自然年轻是结果目标。请大家选一次：追求越紧越好，还是保留个人特征的协调改善。正确答案是后者。用三组词收束：安全、协调、像自己。">
+        <div class="section-kicker">08 · N</div>
+        <div class="slide-heading compact">
+          <h2>Natural｜终点不是“最猛”，而是<em>自然抵达</em></h2>
+          <p>在安全边界内，让改善协调、自然、保留个人特征。</p>
+        </div>
+        <div class="natural-stage">
+          <div class="route route-fast">
+            <span class="route-label">路线 A</span>
+            <h3>越紧越好</h3>
+            <p>只追求变化幅度<br>忽略整体与个体特征</p>
+            <button data-natural-answer="fast">选择这条路</button>
+          </div>
+          <div class="destination">
+            <div class="destination-ring"><b>N</b><span>NATURAL</span></div>
+            <div class="natural-feedback" id="naturalFeedback">请选择你认同的结果目标</div>
+          </div>
+          <div class="route route-natural">
+            <span class="route-label">路线 B</span>
+            <h3>自然、协调、像自己</h3>
+            <p>保留个人特征<br>让松弛改善更协调</p>
+            <button data-natural-answer="natural">选择这条路</button>
+          </div>
+        </div>
+        <div class="natural-values">
+          <span>安全边界</span><span>整体协调</span><span>个体特征</span>
+        </div>
+      </section>
+
+      <section class="slide" data-title="一分钟快测" data-notes="最后用三题检查是否掌握基本点。可邀请现场一起回答。全对后用口诀收束：看、识、锁、分、整、自然。">
+        <div class="section-kicker">09 · CHECK</div>
+        <div class="slide-heading compact">
+          <h2>一分钟快测：你记住了吗？</h2>
+          <p>每题选择一个答案，然后提交。</p>
+        </div>
+        <form class="final-quiz" id="finalQuiz">
+          <fieldset>
+            <legend><span>1</span>维韧打法的起点是？</legend>
+            <label><input type="radio" name="q1" value="a">直接套用标准发数</label>
+            <label><input type="radio" name="q1" value="b">B 超影像先行</label>
+          </fieldset>
+          <fieldset>
+            <legend><span>2</span>Integrate 强调什么？</legend>
+            <label><input type="radio" name="q2" value="a">综合多源信息制定个体化方案</label>
+            <label><input type="radio" name="q2" value="b">只看一个深度数据</label>
+          </fieldset>
+          <fieldset>
+            <legend><span>3</span>Natural 的核心目标是？</legend>
+            <label><input type="radio" name="q3" value="a">变化越明显越好</label>
+            <label><input type="radio" name="q3" value="b">安全、协调、自然年轻</label>
+          </fieldset>
+          <button type="submit" class="primary-button quiz-submit">提交答案</button>
+        </form>
+        <div class="quiz-result" id="quizResult" aria-live="polite">
+          <div class="result-score"><b>0</b><span>/ 3</span></div>
+          <div>
+            <h3>等待提交</h3>
+            <p>答完三题，看看你是否掌握了维韧打法的基本点。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide end-slide" data-title="总结" data-notes="结束语：维韧不是参数口诀，而是决策顺序。用一句话复述：先用影像看清并识别靶层，精准锁定后分层治疗，整合多源信息，最终追求自然年轻。">
+        <div class="end-glow"></div>
+        <div class="end-copy">
+          <p class="eyebrow">TAKEAWAY</p>
+          <h2>维韧，不是参数口诀<br>而是<em>临床决策顺序</em></h2>
+          <div class="takeaway-flow">
+            <span><b>看</b><small>影像先行</small></span><i>→</i>
+            <span><b>识</b><small>识别靶层</small></span><i>→</i>
+            <span><b>锁</b><small>精准锁定</small></span><i>→</i>
+            <span><b>分</b><small>分层治疗</small></span><i>→</i>
+            <span><b>整</b><small>整合决策</small></span><i>→</i>
+            <span><b>自然</b><small>结果目标</small></span>
+          </div>
+          <p class="end-slogan">WITH 医生同行 · IN 深层年轻</p>
+          <button class="secondary-button" data-goto="0">↻ 再看一遍</button>
+        </div>
+        <div class="rabbit-end">
+          <div class="speech-bubble">路线记住了吗？<br><b>先看清，再出发。</b></div>
+          <img src="assets/rabbit.png" alt="兔坚持">
+        </div>
+        <div class="source-note">内容依据：《维韧打法简介-定稿》《半岛大超炮标准化实操-定稿（正文版）》</div>
+      </section>
+    </main>
+
+    <footer class="controls">
+      <button class="nav-button" id="prevButton" aria-label="上一页">←</button>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="slide-counter"><b id="currentNumber">01</b><span>/</span><span id="totalNumber">10</span></div>
+      <button class="nav-button" id="nextButton" aria-label="下一页">→</button>
+    </footer>
+  </div>
+
+  <aside class="toc-panel" id="tocPanel" aria-hidden="true">
+    <div class="toc-header">
+      <div><small>COURSE MAP</small><h2>课件目录</h2></div>
+      <button class="close-button" id="tocClose" aria-label="关闭目录">×</button>
+    </div>
+    <nav id="tocList"></nav>
+    <div class="toc-help">
+      <b>快捷键</b>
+      <span>← → / 空格：翻页</span>
+      <span>F：全屏　N：备注　T：计时</span>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="notes-panel" id="notesPanel" aria-live="polite">
+    <div><b>讲者备注</b><button id="notesClose">×</button></div>
+    <p id="notesText"></p>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
